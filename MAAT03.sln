@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample2", "Sample2\Sample2.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpStatements", "JumpStatements\JumpStatements.csproj", "{4CD74731-10EF-4671-8EFC-96DA5C4D754A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods", "Methods\Methods.csproj", "{4D134FE3-3FA1-40EA-A3AC-AD3C7B5BBF68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{4CD74731-10EF-4671-8EFC-96DA5C4D754A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CD74731-10EF-4671-8EFC-96DA5C4D754A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CD74731-10EF-4671-8EFC-96DA5C4D754A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D134FE3-3FA1-40EA-A3AC-AD3C7B5BBF68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D134FE3-3FA1-40EA-A3AC-AD3C7B5BBF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D134FE3-3FA1-40EA-A3AC-AD3C7B5BBF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D134FE3-3FA1-40EA-A3AC-AD3C7B5BBF68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
