@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Variables", "Variables\Vari
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample1", "Sample1\Sample1.csproj", "{DA41EA44-CF91-4C86-A5FD-D4519AB2D52B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample2", "Sample2\Sample2.csproj", "{DA93D29D-8B5B-43A4-9390-776BEB9D02D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample2", "Sample2\Sample2.csproj", "{DA93D29D-8B5B-43A4-9390-776BEB9D02D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpStatements", "JumpStatements\JumpStatements.csproj", "{4CD74731-10EF-4671-8EFC-96DA5C4D754A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{DA93D29D-8B5B-43A4-9390-776BEB9D02D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA93D29D-8B5B-43A4-9390-776BEB9D02D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA93D29D-8B5B-43A4-9390-776BEB9D02D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CD74731-10EF-4671-8EFC-96DA5C4D754A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD74731-10EF-4671-8EFC-96DA5C4D754A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD74731-10EF-4671-8EFC-96DA5C4D754A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD74731-10EF-4671-8EFC-96DA5C4D754A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
