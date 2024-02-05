@@ -4,44 +4,139 @@
     {
         static void Main(string[] args)
         {
-            int[] intArray = new int[5];
+            int[] numbers = new int[5];
 
-            int oddCount = 0;
-            int evenCount = 0;
+            int?[] numbersPari = new int?[numbers.Length];
+            int?[] numbersDispari = new int?[numbers.Length];
 
-            for (int i = 0; i < intArray.Length; i++)
+            int counterPari = 0;
+            int counterDispari = 0;
+
+            for (int i = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine("Inserisci un numero intero");
-                intArray[i] = int.Parse(Console.ReadLine());
+                int? num = null;
 
-                if (intArray[i] % 2 == 0)
-                    evenCount++;
-                else
-                    oddCount++;
+                while (num == null)
+                {
+                    try
+                    {
+                        Console.WriteLine("Inserisci un numero:");
+                        num = int.Parse(Console.ReadLine());
+                        numbers[i] = num.Value;
+
+                        if (num % 2 == 0)
+                        {
+                            numbersPari[i] = num.Value;
+                            counterPari++;
+                        }
+                        else
+                        {
+                            numbersDispari[i] = num.Value;
+                            counterDispari++;
+                        }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Il numero non è valido");
+                    }
+                }
             }
 
-            Console.WriteLine("");
+            //Console.WriteLine("Ci sono " + counterPari + " numeri PARI e sono:");
+            //Console.WriteLine("Ci sono {0} numeri PARI e sono", counterPari);
+            Console.WriteLine($"Ci sono {counterPari} numeri PARI e sono:");
 
-            for (int i = intArray.Length - 1; i >= 0; i--)
+            for (int i = 0; i < numbersPari.Length; i++)
             {
-                Console.WriteLine(intArray[i]);
+                if (numbersPari[i] != null)
+                {
+                    Console.WriteLine($"{numbersPari[i]}");
+                }
             }
 
-            // num % 2 == 0  -> pari
-            // num % 2 != 0  -> dispari
+            Console.WriteLine($"Ci sono {counterDispari} numeri DISPARI e sono:");
 
-            Console.WriteLine("Ci sono {0} numeri pari", evenCount);
-            Console.WriteLine("Ci sono {0} numeri dispari", oddCount);
+            for (int i = 0; i < numbersDispari.Length; i++)
+                if (numbersDispari[i] != null)
+                    Console.WriteLine($"{numbersDispari[i]}");
 
-            for (int i = 0; i < intArray.Length; i++)
+            // STATEMENT continue
+
+            //string text = "Ciao, sono Alessio!";
+
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    var character = text[i];
+
+            //    if (i >= 8 && i <= 10)
+            //    {
+            //        continue;
+            //    }
+
+            //    Console.WriteLine(character);
+            //}
+
+            bool continuaAggiuntaNumeri = true;
+
+            List<int> numberList = new List<int>();
+
+            Console.WriteLine("Inserisci dei numeri... (per uscire scrivi 'quit')");
+
+            while (continuaAggiuntaNumeri)
             {
-                Console.WriteLine("Inserisci un numero intero");
-                intArray[i] = int.Parse(Console.ReadLine());
+                int? num = null;
+
+                while (num == null)
+                {
+                    try
+                    {
+                        var value = Console.ReadLine();
+
+                        if (value == "quit")
+                        {
+                            continuaAggiuntaNumeri = false;
+                            break;
+                        }
+
+                        num = int.Parse(value);
+                        numberList.Add(num.Value);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Il numero inserito non è valido");
+                    }
+                };
             }
 
-            foreach (int i in intArray.Reverse())
+            numberList.Insert(0, 2);
+            numberList.Insert(1, 8);
+
+
+            List<int> numberList2 = new List<int>();
+
+            numberList2.Add(888);
+            numberList2.Add(999);
+
+            numberList.InsertRange(2, numberList2);
+
+            numberList.RemoveAt(0);
+
+
+            var oper = Console.ReadLine();
+
+            List<string> allowedOp = new List<string>() { "+", "-", "*", "/" };
+
+            //allowedOp.Add("+");
+            //allowedOp.Add("-");
+            //allowedOp.Add("*");
+            //allowedOp.Add("/");
+
+            if (allowedOp.Contains(oper))
             {
-                Console.WriteLine(i);
+                foreach (int num in numberList)
+                {
+                    Console.WriteLine(num);
+                }
             }
         }
     }
