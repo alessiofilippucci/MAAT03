@@ -1,15 +1,12 @@
-﻿namespace Classes
+﻿namespace Sample4
 {
     internal class Calcolatrice
     {
-        float num1;
-        float num2;
+        List<float> nums;
         public float result;
 
-        public Calcolatrice(float num1, float num2)
+        public Calcolatrice()
         {
-            this.num1 = num1;
-            this.num2 = num2;
         }
 
         // metodo Somma

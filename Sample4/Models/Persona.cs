@@ -1,4 +1,4 @@
-﻿namespace Classes
+﻿namespace Sample4
 {
     internal class Persona
     {

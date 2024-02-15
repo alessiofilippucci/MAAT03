@@ -1,4 +1,4 @@
-﻿namespace Classes
+﻿namespace Sample4
 {
     internal class Program
     {
@@ -6,7 +6,7 @@
         {
             Persona p = new Persona("AAAA");
 
-            Calcolatrice c = new Calcolatrice(10, 80);
+            Calcolatrice c = new Calcolatrice();
             Calcolatrice c1 = c;
 
             c.result = 100;
