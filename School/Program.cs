@@ -8,8 +8,7 @@ namespace School
 
         static void Main(string[] args)
         {
-            // add n elements to the list of person
-
+            // add n elements to the list of person from file
             string[] lines = File.ReadAllLines("data.txt");
 
             foreach (string line in lines)
@@ -24,6 +23,10 @@ namespace School
 
                 people.Add(person);
             }
+
+            // spostare procedura di lettura da file
+            // e parsing in classe Persona
+            // in un'altra/e classe/i
 
             Console.WriteLine(people.Count);
         }
