@@ -12,7 +12,7 @@
             _fullPath = fullPath;
         }
 
-        public bool ProcessPeoples(ref List<Person> people)
+        public bool ProcessPeoples(ref List<Person> people, char sep = ',')
         {
             try
             {
@@ -20,7 +20,7 @@
 
                 foreach (string line in lines)
                 {
-                    var lineItems = line.Split(',');
+                    var lineItems = line.Split(sep);
 
                     var person = new Person();
 
