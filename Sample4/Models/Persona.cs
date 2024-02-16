@@ -2,9 +2,17 @@
 {
     internal class Persona
     {
-        public string firstName;
-        public string lastName;
-        public int age;
+        private string firstName;
+        private string lastName;
+        private int age;
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int Age { get; set; }
+
+        public Persona()
+        {
+        }
 
         public Persona(string firstName)
         {
