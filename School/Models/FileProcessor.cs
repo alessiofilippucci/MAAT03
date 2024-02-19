@@ -12,15 +12,17 @@
             _fullPath = fullPath;
         }
 
-        public bool ProcessPeoples(ref List<Person> people, char sep = ',')
+        public bool ProcessPeople(ref List<Person> people, out Exception exception, char sep = ',')
         {
+            exception = null;
+
             try
             {
                 string[] lines = File.ReadAllLines(_fullPath);
 
                 foreach (string line in lines)
                 {
-                    var lineItems = line.Split(sep);
+                    string[] lineItems = line.Split(sep);
 
                     var person = new Person();
 
@@ -33,8 +35,9 @@
 
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                exception = ex;
                 return false;
             }
         }
