@@ -1,10 +1,11 @@
 ﻿using Bogus;
+using School.Models;
 
-namespace School.Models
+namespace School.SeederModels
 {
-    internal class PersonSeed : Faker<Person>
+    internal class TeacherSeed : Faker<Teacher>
     {
-        public PersonSeed()
+        public TeacherSeed()
         {
             RuleFor(d => d.FirstName, f => f.Person.FirstName);
             RuleFor(d => d.LastName, f => f.Person.LastName);

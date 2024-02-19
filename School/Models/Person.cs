@@ -1,6 +1,6 @@
 ﻿namespace School.Models
 {
-    internal class Person
+    internal abstract class Person
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -14,12 +14,9 @@
             }
         }
 
-        // restituire l'età della persona
-        // tramite un metodo
-        // o una proprietà
-        public int GetAge()
+        public virtual void Speech()
         {
-            return DateTime.Now.Year - DOB.Year;
+            Console.WriteLine("Hello!");
         }
     }
 }

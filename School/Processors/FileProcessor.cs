@@ -1,4 +1,6 @@
-﻿namespace School.Models
+﻿using School.Models;
+
+namespace School.Processors
 {
     internal class FileProcessor
     {
@@ -12,7 +14,7 @@
             _fullPath = fullPath;
         }
 
-        public bool ProcessPeople(ref List<Person> people, out Exception exception, char sep = ',')
+        public bool ProcessPeople(ref List<Student> people, out Exception exception, char sep = ',')
         {
             exception = null;
 
@@ -24,7 +26,7 @@
                 {
                     string[] lineItems = line.Split(sep);
 
-                    var person = new Person();
+                    var person = new Student();
 
                     person.FirstName = lineItems[0];
                     person.LastName = lineItems[1];

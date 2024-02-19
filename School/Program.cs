@@ -1,25 +1,42 @@
 ﻿using School.Models;
+using School.Processors;
 
 namespace School
 {
     internal class Program
     {
-        static List<Person> people = new List<Person>();
+        static List<Teacher> teachers = new List<Teacher>();
+        static List<Student> students = new List<Student>();
 
         static void Main(string[] args)
         {
-            //FileProcessor fp = new FileProcessor("data.txt");
-            
-            //if(fp.ProcessPeople(ref people, out Exception ex))
-            //    Console.WriteLine(people.Count);
-            //else
-            //    Console.WriteLine(ex.Message);
+            //Teacher t = new Teacher();
+            //t.FirstName = "";
+            //t.LastName = "";
+            //t.Materia = "";
+            //t.Speech();
+            //Student s = new Student();
+            //s.FirstName = "";
+            //s.LastName = "";
+            //s.CodiceFiscale = "";
+            //s.Math = 6;
+            //s.Ita = 6;
 
             SeedProcessor sp = new SeedProcessor();
-            if (sp.ProcessPeople(ref people, out Exception ex))
-                Console.WriteLine(people.Count);
-            else
-                Console.WriteLine(ex.Message);
+
+            if (sp.ProcessSchool(ref teachers, ref students, out Exception ex))
+            {
+                foreach (Teacher teacher in teachers)
+                {
+                    teacher.Speech();
+                }
+
+                foreach (Student student in students)
+                {
+                    student.Speech();
+                }
+            }
+
         }
     }
 }
